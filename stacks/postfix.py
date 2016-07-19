@@ -25,9 +25,7 @@ def postfix(input_str):
     for each in elements_list:
         if each in ['+', '-', '*', '/']:
             try:
-                var2 = stack.pop()
-                var1 = stack.pop()
-                val = eval('%f %s %f' % (var1, each, var2))
+                val = eval('%f %s %f' % (stack.pop(), each, stack.pop()))
                 stack.append(val)
             except IndexError as index_error:
                 print 'Invalid RPN %s' % (input_str, )
