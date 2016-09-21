@@ -12,6 +12,7 @@ def is_unique_char(input_str):
     if len(input_str) > N_COUNT:
         return False
 
+    # Time complexity defined here O(n) where n is lenght of input_str
     for each in input_str:
         # Bit wise operations are single clock cycle
         if bits_number >> ord(each) & 1:
