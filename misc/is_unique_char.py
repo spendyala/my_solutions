@@ -1,5 +1,5 @@
 
-# assuming ASCII Code and they have 256 characters
+# assuming ASCII Code and they are 256 characters
 # TODO: Notes to read
 # https://en.wikipedia.org/wiki/Plane_%28Unicode%29
 # http://www.ascii-code.com/
