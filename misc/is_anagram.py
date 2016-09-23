@@ -20,7 +20,7 @@ def anagram_sol1(str_1, str_2):  # 3 O(n) + 2O(n log n)
     return match_flag
 
 
-def anagram_sol2(str_1, str_2):  # 7 O(n)
+def anagram_sol2(str_1, str_2):  # 6 O(n) + O(26)
     # If string lenghts are not matching then it is invalid
     # To find lenght of str_1 is O(n) if str_1 has n characters
     # To find lenght of str_2 is O(m) if str_2 has m characters
@@ -42,7 +42,7 @@ def anagram_sol2(str_1, str_2):  # 7 O(n)
 
     match_flag = True
     index = 0
-    while index < N_CHAR and match_flag:  # O(n)
+    while index < N_CHAR and match_flag:  # O(N_CHAR) This is almost constant
         if counters_1[index] == counters_2[index]:
             index += 1
         else:
