@@ -61,7 +61,7 @@ FIRST_26_PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53,
                    59, 61, 67, 71, 73, 79, 83, 89, 97, 101]
 
 
-def anagram_sol3(str_1, str_2):  # 6 O(n) + O(26)
+def anagram_sol3(str_1, str_2):  # 4 O(n)
     # If string lenghts are not matching then it is invalid
     # To find lenght of str_1 is O(n) if str_1 has n characters
     # To find lenght of str_2 is O(m) if str_2 has m characters
