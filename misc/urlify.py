@@ -1,5 +1,7 @@
 # URLify
 
+
+# To use the same string space.
 def urlify(str_to_urlify, true_length):
     spaces_counter = 0
     for each_char in str_to_urlify[:true_length]:
