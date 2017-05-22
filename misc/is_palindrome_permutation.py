@@ -1,4 +1,4 @@
-# Solution 1
+
 def is_permutation_of_palindrome_sol1(string):
     freq_list = build_char_freq_list(string.replace(' ', ''))
     return check_max_one_odd(freq_list)
@@ -40,6 +40,3 @@ def is_permutation_of_palindrome_sol2(string):
 
 assert is_permutation_of_palindrome_sol2('tact coa') == True
 assert is_permutation_of_palindrome_sol2('tact coabbbccc') == False
-
-
-def is_permutation_of_palindrome_sol3(string):
