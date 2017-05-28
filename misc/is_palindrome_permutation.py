@@ -40,3 +40,19 @@ def is_permutation_of_palindrome_sol2(string):
 
 assert is_permutation_of_palindrome_sol2('tact coa') == True
 assert is_permutation_of_palindrome_sol2('tact coabbbccc') == False
+
+
+# Solution 3
+def is_permutation_of_palindrome_sol3(string):
+    string = string.replace(' ',  '')
+    bit_vector = 0
+    for each_char in string:
+        bit_vector ^= 1 << ord(each_char)
+    # Even number check
+    if not bit_vector & (bit_vector-1):
+        return True
+    return False
+
+assert is_permutation_of_palindrome_sol3('tact coa') == True
+assert is_permutation_of_palindrome_sol3('tact coabbbccc') == False
+assert is_permutation_of_palindrome_sol3('tact coac') == False
