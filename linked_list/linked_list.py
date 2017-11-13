@@ -32,7 +32,6 @@ head.next.next.next = Node(4)
 print(runner_techinque_recursive(head.next.next, head).__dict__)
 print(runner_techinque_iterative(head).__dict__)
 
-import pdb; pdb.set_trace()
 head = Node(1)
 head.next = Node(2)
 head.next.next = Node(3)
