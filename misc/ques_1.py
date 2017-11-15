@@ -20,22 +20,47 @@ input_lst = [2.1, 2.5, 2.9, 3.0, 3.6, 3.9, 5.2, 5.9, 6.1, 8.2, 10.2, 11.3, 11.8,
 previous_sec = 0
 output_list = []
 
+#while input_lst:
+#    try:
+#        peak_first = input_lst[0]
+#        peak_third = input_lst[2]
+#        if (int(peak_first) == int(peak_third) or
+#            peak_third < int(peak_first)+1.2):
+#                current_sec = int(peak_first)
+#                if previous_sec+1.2 > peak_third:
+#                    previous_sec = peak_third
+#                    input_lst.pop(0)
+#                    continue 
+#                if previous_sec != current_sec:
+#                    output_list.append(peak_first)
+#                    previous_sec = current_sec
+#        input_lst.pop(0)
+#    except Exception:
+#        break
+
+#print(output_list)
+
+input_lst = [2.1, 2.5, 2.9, 3.0, 3.6, 3.9, 5.2, 5.9, 6.1, 8.2, 10.2, 11.3, 11.8, 11.9]
+
+previous = 0
+output_lst = []
+
+current_window = []
+gitches_window = []
+
 while input_lst:
     try:
-        peak_first = input_lst[0]
-        peak_third = input_lst[2]
-        if (int(peak_first) == int(peak_third) or
-            peak_third < int(peak_first)+1.2):
-                current_sec = int(peak_first)
-                if previous_sec+1.2 > peak_third:
-                    previous_sec = peak_third
-                    input_lst.pop(0)
-                    continue 
-                if previous_sec != current_sec:
-                    output_list.append(peak_first)
-                    previous_sec = current_sec
-        input_lst.pop(0)
-    except Exception:
+        first_peek = input_lst[0]
+        third_peek = input_lst[2]
+        if third_peek <= first_peek+1:
+            if first_peek <= previous+1:
+                print(first_peek)
+                input_lst.pop(0)
+                continue
+            previous = first_peek
+            output_lst.append(previous)
+            #print('Starting {}, previous {}'.format(first_peek, previous))
+    except IndexError:
         break
-
-print(output_list)
+    input_lst.pop(0) 
+print(output_lst)
