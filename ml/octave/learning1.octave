@@ -1,0 +1,393 @@
+octave:1> w = -6 + sqrt(10) * (randn(1, 10000));
+octave:2> hist(w)
+octave:3> hist(w, 50)
+octave:1> w = -6 + sqrt(10) * (randn(1, 10000));
+octave:2> hist(w)
+octave:3> hist(w, 50)
+octave:4> t = [0:0.01:0.98]
+
+
+octave:8> y1 = sin(2*pi*4*t);
+octave:9> plot(t, y1);
+octave:10> y2 = cos(2*pi*4*t);
+octave:11> plot(t, y2)
+octave:12> plot(t, y1);
+octave:13> hold on;
+octave:14> plot(t, y2, 'r');
+octave:8> y1 = sin(2*pi*4*t);
+octave:9> plot(t, y1);
+octave:10> y2 = cos(2*pi*4*t);
+octave:11> plot(t, y2)
+octave:12> plot(t, y1);
+octave:13> hold on;
+octave:14> plot(t, y2, 'r');
+octave:15> xlabel('time');
+octave:16> ylabel('value');
+octave:17> legend('sin', 'cos');
+octave:18> title('my plot');
+octave:19> print -dpng 'myplot.png'
+octave:19> print -dpng 'myplot.png'
+octave:20> close
+
+
+ctave:22> figure(2); plot(t, y2);
+octave:23> close
+octave:24> close
+octave:25> subplot(1, 2, 1); % Divides plot a 1x2 grid, access first element
+
+ctave:20> close
+octave:21> figure(1); plot(t, y1);
+octave:22> figure(2); plot(t, y2);
+octave:23> close
+octave:24> close
+octave:25> subplot(1, 2, 1); % Divides plot a 1x2 grid, access first element
+octave:26> close
+octave:27> subplot(1, 2, 1); % Divides plot a 1x2 grid, access first element
+octave:28> plot(t, y1);
+octave:29> sublot(1, 2, 2);
+error: 'sublot' undefined near line 1 column 1
+octave:29> subplot(1, 2, 2);
+octave:30> plot(t, y2)
+octave:31> axis([0.5 1 -1 1])
+octave:33> A = magic(5);
+octave:34> A
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+octave:35> imagesc(A)
+octave:36> close
+octave:37> imagesc(A), colorbar, colormap gray;
+octave:38> A(1, 2);
+octave:39> A(1, 2)
+ans =  24
+octave:40> A(4, 5)
+ans =  3
+
+octave:41> a = 1, b = 2, c = 3
+a =  1
+b =  2
+c =  3
+octave:42> a
+a =  1
+octave:43> a = 1; b = 2; c = 3;
+
+
+
+octave:44> v = zeros(10, 1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+octave:45> for i=1:10,
+>    v(i) = 2^i;
+> end;
+octave:46> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+octave:47> indices=1:10
+indices =
+
+    1    2    3    4    5    6    7    8    9   10
+
+octave:48> for i=indicies,
+>   disp(i);
+> end;
+error: 'indicies' undefined near line 1 column 7
+octave:48> for i=indices,
+>   disp(i);
+> end;
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+octave:49> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+octave:50> i = 1;
+octave:51> while i <= 5,
+>   v(i) = 100;
+>   i = i+1;
+> end;
+octave:52> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+
+
+while true,
+>  v(i) = 999;
+>  i = i+1;
+>  if i == 6,
+>     break;
+>  end;
+> end;
+
+
+
+octave:56> if v(1) == 1,
+>    disp('Value is 1');
+> elseif v(1) == 2,
+>    disp('Value is 2');
+> else
+>    disp('Value is not 1 or two');
+> end;
+Value is not 1 or two
+
+
+octave:57> pwd
+ans = /Users/vpendyala/my_solutions/ml/octave
+octave:58> ls
+learning1.mat		myplot.png		squareTheNumber.m
+octave:59> squareTheNumber(5)
+ans =  25
+
+
+
+addpath('<path>') % Octave search path (advanced/optional)
+
+
+squareAndCubeTheNumber(10)
+y1 =  100
+y2 =  1000
+ans =  100
+
+
+[a, b] = squareAndCubeTheNumber(10)
+y1 =  100
+y2 =  1000
+a =  100
+b =  1000
+octave:62> [a, b] = squareAndCubeTheNumber(10);
+y1 =  100
+y2 =  1000
+octave:63> a
+a =  100
+octave:64> b
+b =  1000
+
+
+octave:67> %design matrix
+octave:67> x = [1 1; 1 2; 1 3]
+x =
+
+   1   1
+   1   2
+   1   3
+
+octave:69> %vector Y
+octave:69> y = [1; 2; 3]
+y =
+
+   1
+   2
+   3
+
+octave:70> 
+
+
+octave:73> %vector Y
+octave:73> y = [1; 2; 3]
+y =
+
+   1
+   2
+   3
+
+octave:74> j = costFunctionJ(x, y, theta)
+j = 0
+octave:75> theta = [0; 1];
+octave:76> j = costFunctionJ(x, y, theta)
+j = 0
+octave:77> theta = [0; 0];
+octave:78> j = costFunctionJ(x, y, theta)
+j =  2.3333
+
+
+
+Vectorization Example
+h_0(x) = sum_j_0_to_n(0_j*x_j)
+= 0_Transpose * x
+
+Unvectorized implementation
+prediction = 0.0
+for j = 1:n+1,
+    prediction = prediction + 0_j * x_j
+end;
+
+Vectorized implementation
+prediction = 0_Transpose * x
+
+
+
+
+theta := theta - alpha * delta
+    where delta = 1/m * sum_1_m(h(x_sup_i - y_sup_i) * x_sup_i
+
+
+octave:87> a = magic(4)
+a =
+
+   16    2    3   13
+    5   11   10    8
+    9    7    6   12
+    4   14   15    1
+
+octave:88> b = a(:, 1:2)
+b =
+
+   16    2
+    5   11
+    9    7
+    4   14
+
+octave:89> b = a(1:4, 1:2)
+b =
+
+   16    2
+    5   11
+    9    7
+    4   14
+
+
+octave:79> A = [1 2; 3 4; 5 6];
+octave:80> B = [1 2 3; 4 5 6];
+octave:81> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:82> B
+B =
+
+   1   2   3
+   4   5   6
+
+octave:83> A'
+ans =
+
+   1   3   5
+   2   4   6
+
+octave:84> A' + B
+ans =
+
+    2    5    8
+    6    9   12
+
+octave:85> B*A
+ans =
+
+   22   28
+   49   64
+
+octave:86> A*B
+ans =
+
+    9   12   15
+   19   26   33
+   29   40   51
+
+octave:87> A +B
+error: operator +: nonconformant arguments (op1 is 3x2, op2 is 2x3)
+octave:87> B'*A
+error: operator *: nonconformant arguments (op1 is 3x2, op2 is 3x2)
+octave:87> B' * A
+error: operator *: nonconformant arguments (op1 is 3x2, op2 is 3x2)
+
+v = zeros(10, 1);
+for i = 1:10
+  for j = 1:10
+    v(i) = v(i) + A(i, j) * x(j);
+  end
+end
+
+
+Let A be a 10x10 matrix andx be a 10-element vector. Your friend wants to compute the product Ax and writes the following code:
+
+
+v = zeros(10, 1);
+for i = 1:10
+  for j = 1:10
+    v(i) = v(i) + A(i, j) * x(j);
+  end
+endv = zeros(10, 1);
+for i = 1:10
+  for j = 1:10
+    v(i) = v(i) + A(i, j) * x(j);
+  end
+end
+1
+2
+3
+4
+5
+6
+v = zeros(10, 1);
+for i = 1:10
+  for j = 1:10
+    v(i) = v(i) + A(i, j) * x(j);
+  end
+end
+How would you vectorize this code to run without any for loops? Check all that apply.
+
+v = A * x;
+
+v = Ax;
+
+v = x' * A;
+
+v = sum (A * x);
