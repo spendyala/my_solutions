@@ -15,11 +15,11 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
+func_round = @(num) round(num);
 
+sigmoid_value = sigmoid(X * theta);
 
-
-
-
+p = func_round(sigmoid_value);
 
 % =========================================================================
 
