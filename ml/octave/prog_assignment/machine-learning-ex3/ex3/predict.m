@@ -21,9 +21,20 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+%disp('Testing')
+%disp(size(X));
+X = [ones(m, 1) X];
 
+for j=1:m,
+    % hidden layer
+    z = sigmoid(X(j,:) * Theta1');
 
+    % add bias to hidden layer
+    z = [1 z];
 
+    % hidden layer 
+    [trash, p(j)] = max(sigmoid(z * Theta2'));
+end;
 
 
 
