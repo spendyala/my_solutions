@@ -2,3 +2,4 @@
 .venv
 .DS_Store
 token.mat
+.ipynb_checkpoints
