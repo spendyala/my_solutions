@@ -7,3 +7,6 @@
 `$ eval "$(ssh-agent -s)"`
 
 `$ ssh-add ~/.ssh/id_rsa`
+
+# Interesting Links
+http://www.pytables.org/usersguide/installation.html
