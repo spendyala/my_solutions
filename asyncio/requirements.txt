@@ -1,0 +1,17 @@
+aiodns==1.1.1
+aiohttp==2.3.2
+arrow==0.10.0
+async-timeout==2.0.0
+certifi==2017.11.5
+chardet==3.0.4
+idna==2.6
+multidict==3.3.2
+pycares==2.3.0
+python-dateutil==2.6.1
+PyYAML==3.12
+python-consul==0.7.2
+requests==2.18.4
+six==1.11.0
+urllib3==1.22
+uvloop==0.8.1
+yarl==0.16.0
