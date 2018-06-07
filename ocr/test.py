@@ -6,7 +6,7 @@ import os
 
 
 # load the example image and convert it to grayscale
-image = cv2.imread("pha.png")
+image = cv2.imread("telugu.png")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 
