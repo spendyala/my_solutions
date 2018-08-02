@@ -10,3 +10,6 @@
 
 # Interesting Links
 http://www.pytables.org/usersguide/installation.html
+
+# Selenium
+`brew cask install chromedriver`
