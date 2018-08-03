@@ -28,14 +28,14 @@ def should_turn(cur_row, cur_col, rows, cols):
 	< cols / 2 will give priority to right part when current position is vertically centered.
     '''
     # Check if position is in top-left part.
-    print(cur_row, cur_col, rows, cols, 'Current Position')
+    # print(cur_row, cur_col, rows, cols, 'Current Position')
 
     if ((cur_row < (rows + 1) / 2) and (cur_col < cols / 2)):
-        print(cur_row, (rows + 1) / 2, cur_col, cols / 2, 'Top Left')
+        # print(cur_row, (rows + 1) / 2, cur_col, cols / 2, 'Top Left')
         # Condition to turn when current position is in top-left part.
         return cur_row == cur_col + 1
     # Condition to turn when current position in other parts.
-    print(cur_row, rows-1-cur_row, min(cur_row, rows-1-cur_row), cur_col, cols-1-cur_col, min(cur_col, cols-1-cur_col), 'Others')
+    # print(cur_row, rows-1-cur_row, min(cur_row, rows-1-cur_row), cur_col, cols-1-cur_col, min(cur_col, cols-1-cur_col), 'Others')
     return min(cur_row, rows-1-cur_row) == min(cur_col, cols-1-cur_col)
 
 
