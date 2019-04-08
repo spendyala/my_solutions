@@ -1,0 +1,159 @@
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+==> Summary
+🍺  /usr/local/Cellar/icu4c/63.1: 254 files, 68.4MB
+==> Installing gnuplot dependency: harfbuzz
+==> Downloading https://homebrew.bintray.com/bottles/harfbuzz-2.4.0.high_sierra.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/96/965ac40bea0541668072e77f9de5317c65eae2fa2a547e305eff8fd8fbc5a8e4?__gda__=exp=1554631039~hmac=9dad4f0d2ff769014f0392122ce
+######################################################################## 100.0%
+==> Pouring harfbuzz-2.4.0.high_sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/harfbuzz/2.4.0: 145 files, 9.6MB
+==> Installing gnuplot dependency: pango
+==> Downloading https://homebrew.bintray.com/bottles/pango-1.42.4_1.high_sierra.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/f1/f1d5d2471ff6a0f6bdf643fd821d6d96fef211819ee080a0a6352554ce71fdb9?__gda__=exp=1554631043~hmac=d039369401f93e359918a8588a6
+######################################################################## 100.0%
+==> Pouring pango-1.42.4_1.high_sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/pango/1.42.4_1: 106 files, 4.4MB
+==> Installing gnuplot dependency: qt
+==> Downloading https://homebrew.bintray.com/bottles/qt-5.12.2.high_sierra.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/e8/e80159c1b66e0f24a5b2189b2996c65422ebdf1ebd17eb104fdd4f28be8ad12e?__gda__=exp=1554631048~hmac=4baaa3272d4f2774b058415d627
+######################################################################## 100.0%
+==> Pouring qt-5.12.2.high_sierra.bottle.tar.gz
+==> Caveats
+We agreed to the Qt open source license for you.
+If this is unacceptable you should uninstall.
+
+qt is keg-only, which means it was not symlinked into /usr/local,
+because Qt 5 has CMake issues when linked.
+
+If you need to have qt first in your PATH run:
+  echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find qt you may need to set:
+  export LDFLAGS="-L/usr/local/opt/qt/lib"
+  export CPPFLAGS="-I/usr/local/opt/qt/include"
+
+==> Summary
+🍺  /usr/local/Cellar/qt/5.12.2: 9,661 files, 313MB
+==> Installing gnuplot
+==> Downloading https://homebrew.bintray.com/bottles/gnuplot-5.2.6_1.high_sierra.bottle.1.tar.gz
+==> Downloading from https://akamai.bintray.com/24/24a6c735fb69f8f7f016cf4ecadbe8d11022523c9d7160ef03160f41bf117aa7?__gda__=exp=1554631163~hmac=261a7083d6c6a23e1f87db6227f
+######################################################################## 100.0%
+==> Pouring gnuplot-5.2.6_1.high_sierra.bottle.1.tar.gz
+🍺  /usr/local/Cellar/gnuplot/5.2.6_1: 48 files, 2.9MB
+==> Caveats
+==> lua
+You may also want luarocks:
+  brew install luarocks
+==> gettext
+gettext is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
+
+If you need to have gettext first in your PATH run:
+  echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find gettext you may need to set:
+  export LDFLAGS="-L/usr/local/opt/gettext/lib"
+  export CPPFLAGS="-I/usr/local/opt/gettext/include"
+
+==> libffi
+libffi is keg-only, which means it was not symlinked into /usr/local,
+because some formulae require a newer version of libffi.
+
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+
+==> openssl
+A CA file has been bootstrapped using certificates from the SystemRoots
+keychain. To add additional certificates (e.g. the certificates added in
+the System keychain), place .pem files in
+  /usr/local/etc/openssl/certs
+
+and run
+  /usr/local/opt/openssl/bin/c_rehash
+
+openssl is keg-only, which means it was not symlinked into /usr/local,
+because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
+
+If you need to have openssl first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find openssl you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+==> readline
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> sqlite
+sqlite is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides an older sqlite3.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+==> python
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python/libexec/bin
+
+If you need Homebrew's Python 2.7 run
+  brew install python@2
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> icu4c
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+==> qt
+We agreed to the Qt open source license for you.
+If this is unacceptable you should uninstall.
+
+qt is keg-only, which means it was not symlinked into /usr/local,
+because Qt 5 has CMake issues when linked.
+
+If you need to have qt first in your PATH run:
+  echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find qt you may need to set:
+  export LDFLAGS="-L/usr/local/opt/qt/lib"
+  export CPPFLAGS="-I/usr/local/opt/qt/include"
+
+C02P610LG3QT:~ vpendyala$ export LDFLAGS="-L/usr/local/opt/qt/lib"
+C02P610LG3Q
