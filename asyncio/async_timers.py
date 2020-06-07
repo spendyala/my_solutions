@@ -7,7 +7,7 @@ async def my_timer_05():
         count += 1
         if count > 300:
             break
-        await asyncio.sleep(0.005)
+        await asyncio.sleep(0.5)
         print('Run my timer 1 {}'.format(count))
 
 
