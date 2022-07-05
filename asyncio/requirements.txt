@@ -6,7 +6,7 @@ certifi==2017.11.5
 chardet==3.0.4
 idna==2.6
 multidict==3.3.2
-pycares==2.3.0
+pycares==4.2.0
 python-dateutil==2.6.1
 PyYAML>=4.2b1
 python-consul==0.7.2
